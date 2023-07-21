@@ -1,0 +1,83 @@
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modalContent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  overflow: auto;
+  text-align: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.modalContent:after {
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  content: '';
+}
+
+.modalDialog {
+  position: relative;
+  outline: 0;
+  width: auto;
+  display: inline-block;
+  padding: 10px 0 20px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  max-width: auto;
+  cursor: default;
+  border-radius: 4px;
+  background-color: white;
+  margin-top: 100px;
+  // @media #{$mq-md} {
+  //   margin-top: -100px;
+  // }
+  width: 300px;
+
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 30px 60px 20px;
+  }
+
+  svg {
+    fill: black;
+  }
+}
+
+.close {
+  display: flex;
+
+  > button {
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    background: inherit;
+    cursor: pointer;
+  }
+}
+
+.closeText {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 100;
+  margin-left: 30px;
+}
